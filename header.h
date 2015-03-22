@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <vector>
 
 #ifndef __header__
 #define __header__
@@ -14,16 +15,18 @@ private:
 	string name;
 	node* left;
 	node* right;
+	node* parent;
 public:
-	node(int key, string name);
+	node(int key, string name, node* parent);
 	int get_key();
 	string get_name();
 	node* get_left();
 	node* get_right();
-	void set_left(int key, string name);
-	void set_right(int key, string name);
+	void set_left(int key, string name, node* parent);
+	void set_right(int key, string name, node* parent);
 	int get_height();
 	void set_height(int);
+	node* get_parent();
 };
 
 class tree
